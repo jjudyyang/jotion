@@ -1,9 +1,11 @@
 "use client";
 
+
 import { useScrollTop } from "@/hooks/use-scroll-top";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Logo } from "./logo";
+import Link from "next/link";
 
 const Navbar = () => {
     const scrolled = useScrollTop();
@@ -16,8 +18,8 @@ const Navbar = () => {
         >
             <Logo />
             <div className="ml-auto flex items-center gap-x-2">
-                <Button type="button" variant="ghost" size="sm">
-                    Log in
+                <Button asChild>
+                    <Link href="/documents">Enter Jotion</Link>
                 </Button>
             </div>
         </div>
